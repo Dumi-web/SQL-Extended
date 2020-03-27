@@ -14,10 +14,8 @@ public class databaseConnectionManager {
         this.properties = new Properties();
         this.properties.setProperty("postgres",userName);
         this.properties.setProperty("pass",password);
-
     }
     public Connection getConnection() throws SQLException{
-        return DriverManager.getConnection(this.url,this.properties);
-
+        return DriverManager.getConnection(this.url,"postgres","pass");
     }
 }
