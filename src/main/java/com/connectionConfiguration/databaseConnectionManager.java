@@ -12,10 +12,10 @@ public class databaseConnectionManager {
     public databaseConnectionManager(String host,String databaseName,String userName,String password){
         this.url = "jdbc:postgresql://"+host+"/"+databaseName;
         this.properties = new Properties();
-        this.properties.setProperty("postgres",userName);
+        this.properties.setProperty("user",userName);
         this.properties.setProperty("pass",password);
     }
     public Connection getConnection() throws SQLException{
-        return DriverManager.getConnection(this.url,"postgres","pass");
+        return DriverManager.getConnection(this.url,"user","pass");
     }
 }

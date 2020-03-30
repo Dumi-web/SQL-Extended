@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class JDBCExecutor {
     public static void main(String[] args) throws SQLException {
-        databaseConnectionManager dcm = new databaseConnectionManager("localhost", "umuzi", "postgres", "pass");
+        databaseConnectionManager dcm = new databaseConnectionManager("localhost", "umuzi", "user", "pass");
         try {
             Connection connection = dcm.getConnection();
             Statement statement = connection.createStatement();
